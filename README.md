@@ -1,0 +1,1 @@
+# contao-article-as-module
