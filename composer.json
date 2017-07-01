@@ -3,17 +3,17 @@
 	"type": "contao-module",
 	"description": "Use articles as modules in Contao Open Source CMS",
   "keywords": [
-    "Article",
-    "Module",
-    "InsertTag"
+    "article",
+    "module",
+    "inserttag"
   ],
   "homepage": "https://github.com/bastibuck/contao-article-as-module",
 	"license": "LGPL-3.0+",
 	"authors": [
 		{
-			"name": "Basti bastibuck",
+			"name": "Basti Buck",
       "email": "mail@bastibuck.de",
-			"homepage": "http://www.bastibuck.de",
+			"homepage": "http://bastibuck.de",
       "role": "Developer"
 		}
 	],
