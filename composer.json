@@ -33,7 +33,7 @@
   "extra":{
     "contao":{
       "sources":{
-        "":"system/modules/ab_testing"
+        "":"system/modules/article_as_module"
       }
     }
   }
