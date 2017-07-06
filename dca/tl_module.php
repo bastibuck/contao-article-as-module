@@ -27,7 +27,7 @@ $GLOBALS['TL_DCA']['tl_module']['fields']['pick_article'] = array
   'eval'                    => array
   (
     'chosen'                      => true,
-    'tl_class'                    => '',
+    'tl_class'                    => 'w50',
     'mandatory'                   => true,
     'includeBlankOption'          => true
   ),
