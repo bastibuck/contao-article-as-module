@@ -54,26 +54,26 @@ class tl_module extends \Backend {
     $objArticles = \ArticleModel::findAll(array('order' => 'pid, sorting'));
 
     while ($objArticles->next())
-		{
+    {
       $arrArticles[$objArticles->pid][] = array(
         'id' => $objArticles->id,
         'title' => $objArticles->title,
         'alias' => $objArticles->alias
       );
-		}
+    }
 
     // get all regular pages
     $objPages = \PageModel::findByType('regular', array('order' => 'pid, sorting'));
 
     // build array with pages as group headlines
-		while ($objPages->next())
-		{
+    while ($objPages->next())
+    {
       foreach($arrArticles[$objPages->id] as $arrArticle) {
         $arrArticleSet[$objPages->title][$arrArticle['id']] = $arrArticle['title'].' ['.$arrArticle['alias'].']';
       }
-		}
+    }
 
     // return array to field options
-		return $arrArticleSet;
+    return $arrArticleSet;
   }
 }

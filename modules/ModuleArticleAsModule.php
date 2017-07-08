@@ -19,31 +19,31 @@ class ModuleArticleAsModule extends \Module {
 
 
   /**
-	 * Display a wildcard in the back end
-	 */
-	public function generate()
-	{
-		if (TL_MODE == 'BE')
-		{
-			/** @var \BackendTemplate|object $objTemplate */
-			$objTemplate = new \BackendTemplate('be_wildcard');
+   * Display a wildcard in the back end
+   */
+  public function generate()
+  {
+    if (TL_MODE == 'BE')
+    {
+      /** @var \BackendTemplate|object $objTemplate */
+      $objTemplate = new \BackendTemplate('be_wildcard');
 
-			$objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['article_as_module'][0]). ' ###';
-			$objTemplate->id = $this->id;
-			$objTemplate->link = $this->name;
-			$objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
+      $objTemplate->wildcard = '### ' . utf8_strtoupper($GLOBALS['TL_LANG']['FMD']['article_as_module'][0]). ' ###';
+      $objTemplate->id = $this->id;
+      $objTemplate->link = $this->name;
+      $objTemplate->href = 'contao/main.php?do=themes&amp;table=tl_module&amp;act=edit&amp;id=' . $this->id;
 
-			return $objTemplate->parse();
-		}
+      return $objTemplate->parse();
+    }
 
-		return parent::generate();
-	}
+    return parent::generate();
+  }
 
 
   /**
-	 * Generate the module
-	 */
-	protected function compile() {
+   * Generate the module
+   */
+  protected function compile() {
 
     // get published article by saved ID
     $objArticle = \ArticleModel::findPublishedById($this->pick_article);
